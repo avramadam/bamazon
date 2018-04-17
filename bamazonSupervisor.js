@@ -31,11 +31,10 @@ function start() {
         conn.end();
       }
     });
-
 }
 
 function displayItems() {
-  //var sql = "SELECT department_id,departments.department_name,over_head_costs,SUM(products.product_sales) AS product_sales, product_sales - departments.over_head_costs AS Total_Profit FROM departments INNER JOIN products ON departments.department_name = products.department_name GROUP BY department_id";
+  
   var sql = "SELECT department_id,departments.department_name,over_head_costs,SUM(products.product_sales) AS product_sales, SUM(products.product_sales) - departments.over_head_costs AS Total_Profit FROM departments INNER JOIN products ON departments.department_name = products.department_name GROUP BY department_id";
   
   conn.query(sql, function (err, result) {

@@ -42,11 +42,10 @@ function displayItems() {
   var sql = "SELECT * FROM products";
   
   conn.query(sql, function (err, result) {
-    var displayTable = [];
     if (err) throw err;
+    var displayTable = [];
       for (var i = 0; i < result.length; i++) {
         displayTable[i] = [result[i].item_id, result[i].product_name, result[i].price, result[i].stock_quantity]
-        //console.log(result[i].item_id + " " + result[i].product_name + " " + result[i].price);
       }
       console.table(['\nItem ID','Description','Price', 'Quantity'],displayTable);
       start();
@@ -55,7 +54,6 @@ function displayItems() {
 
   function viewLowInventory() {
   var sql = "SELECT * FROM products WHERE stock_quantity < 5";
-  
   conn.query(sql, function (err, result) {
     var displayTable = [];
     if (err) throw err;
@@ -79,7 +77,6 @@ function displayItems() {
     if (err) throw err;
       for (var i = 0; i < result.length; i++) {
         displayTable[i] = [result[i].item_id, result[i].product_name, result[i].price, result[i].stock_quantity]
-        //console.log(result[i].item_id + " " + result[i].product_name + " " + result[i].price);
       }
       console.table(['\nItem ID','Description','Price', 'Quantity'],displayTable);
   });

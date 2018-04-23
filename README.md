@@ -38,10 +38,10 @@ Department ID  Department Name      Over Head Costs  Product Sales  Total Profit
 
 The total_profit column is calculated using the difference between "Over Head Costs" and "Product Sales".
 
-How to run the application:\n
+How to run the application:
 
-node bamazonCustomer.js\n
-node bamazonManager.js\n
-node bamazonSupervisor.js\n
+node bamazonCustomer.js
+node bamazonManager.js
+node bamazonSupervisor.js
 
 Major Conributor: Avram Adam
